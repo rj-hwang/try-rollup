@@ -1,0 +1,7 @@
+{
+  "name": "try-rollup",
+  "version": "1.0.0",
+  "devDependencies": {
+    "rollup-plugin-json": "^2.0.2"
+  }
+}
