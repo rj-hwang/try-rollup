@@ -57,3 +57,22 @@ $ rollup --help
 	```
 	1. putting `.babelrc` file in src, rather than the project root. This allows us to have a different `.babelrc` for things like tests, if we need that later – it's generally a good idea to have separate configuration for separate tasks.  
 	2. using `es2015-rollup` instead of `es2015` – that's because otherwise Babel will convert our modules to CommonJS before Rollup gets a chance to do its thing, causing it to fail. `es2015-rollup` also includes the `external-helpers` plugin, which allows Rollup to include any 'helpers' just once at the top of the bundle, rather than including them in every module that uses them (which is the default behaviour).
+- [05-use-npm](http://rollupjs.org/guide/#using-rollup-with-npm)
+	```
+	$ npm init
+	$ npm i --save rollup
+	```
+	package.json:
+	```
+	...
+	"dependencies": {
+	  "rollup": "^0.35.13"
+	},
+	"scripts": {
+	  "build": "rollup -c"
+	},
+	...
+	```
+	```
+	$ npm run build
+	```
