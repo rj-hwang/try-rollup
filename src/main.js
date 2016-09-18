@@ -1,4 +1,4 @@
 import { version } from '../package.json';
-export default function () {
-  console.log('current version is ' + version);
-}
+
+const message = `current version is ${version}`;
+export default () => console.log(message);
